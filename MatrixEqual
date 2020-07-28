@@ -1,0 +1,62 @@
+package matrix;
+
+import java.util.Scanner;
+
+public class MarricesAreEqualOrNot {
+
+	public static void main(String[] args) {
+	int row1,row2,colomn1,colomn2;
+	boolean bool=true;
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Please enter the row of first matrix");
+	row1=sc.nextInt();
+	System.out.println("Please enter the colomn of first matrix");
+	colomn1=sc.nextInt();
+	System.out.println("Please enter the elements of first matrix");
+	int a[][]=new int[row1][colomn1];
+	for(int i=0;i<row1;i++)
+	{
+		for(int j=0;j<colomn1;j++)
+		{
+			a[i][j]=sc.nextInt();
+		}
+	}
+	System.out.println("Please enter the row of second matrix");
+	row2=sc.nextInt();
+	System.out.println("Please enter the colomn of second matrix");
+	colomn2=sc.nextInt();
+	int b[][]=new int[row2][colomn2];
+	System.out.println("Please enter the elements of scond matrix");
+	for(int i=0;i<row2;i++)
+	{
+		for(int j=0;j<colomn2;j++)
+		{
+			b[i][j]=sc.nextInt();
+		}
+	}
+	if(row1!=row2||colomn1!=colomn2)
+	{
+	 System.out.println("Matrix are not equal");	
+	}
+	else
+		for(int i=0;i<row2;i++)
+		{
+			for(int j=0;j<colomn2;j++)
+			{
+				if(a[i][j]!=b[i][j])
+				{
+					bool=false;
+				}
+			}
+		
+		}
+	if(bool==false)
+	{
+		System.out.println(" NO!Matrix are not equal");
+	}
+	else
+		System.out.println(" Yes!Matrix are equal");
+		
+	}
+
+}
