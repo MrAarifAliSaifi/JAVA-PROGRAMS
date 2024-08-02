@@ -1,0 +1,21 @@
+import java.util.*;
+
+class KthLargest {
+	public int findTheLargestNumber(int arr[], int k) {
+		int length= arr.length;
+		Arrays.sort(arr);
+		return arr[length-k];
+	}
+}
+
+public class Main
+{
+	public static void main(String[] args) {
+
+		//create the array
+		int arr[]= {1,2,3,4,5,2,6,2,9,1,4,7,0,4};
+		KthLargest obj= new KthLargest();
+		int largestEle=obj.findTheLargestNumber(arr,2);
+		System.out.println("The largest element in the array is:"+largestEle);
+	}
+}
