@@ -1,0 +1,28 @@
+class Reverse {
+	public int[] reverseArray(int arr[]) {
+		int length= arr.length-1;
+		int i=0;
+		int j=length;
+		//here we are using the swapping approach to swap the item.
+		while(i<j) {
+			int temp = arr[i];
+			arr[i]=arr[j];
+			arr[j]=temp;
+			i++;
+			j--;
+		}
+		return arr;
+	}
+}
+
+public class Main
+{
+	public static void main(String[] args) {
+		Reverse obj= new Reverse();
+		int arr[]= {1,2,3,4,5,6,7,8,9};
+		int reversedArray[]= obj.reverseArray(arr);
+		for(int ele:arr){
+		    System.out.print(ele);
+		}
+	}
+}
